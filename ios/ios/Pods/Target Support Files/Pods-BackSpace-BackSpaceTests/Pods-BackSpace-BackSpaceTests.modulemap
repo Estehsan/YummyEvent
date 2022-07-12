@@ -1,0 +1,6 @@
+module Pods_BackSpace_BackSpaceTests {
+  umbrella header "Pods-BackSpace-BackSpaceTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
