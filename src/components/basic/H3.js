@@ -2,23 +2,18 @@ import {StyleSheet, useColorScheme, Text} from 'react-native';
 import React from 'react';
 import {theme} from '../../theme';
 
-const H3 = ({children, font, color, size}) => {
-  const isDarkMode = useColorScheme() === 'light';
-
+const H3 = ({children, font, color, size, textTransform}) => {
   return (
     <>
       <Text
         style={{
           fontSize: size ? size : 12,
-          color: color
-            ? color
-            : isDarkMode
-            ? theme.colors.bg
-            : theme.colors.accent,
-          fontFamily: font ? font : 'Montserrat-SemiBold',
+          color: color ? color : theme.colors.accent,
+          fontFamily: font ? font : 'Gilroy-SemiBold',
           fontWeight: '600',
-          letterSpacing: 2,
+          // letterSpacing: 2,
           lineHeight: 24,
+          textTransform: textTransform ? textTransform : 'capitalize',
         }}>
         {children}
       </Text>

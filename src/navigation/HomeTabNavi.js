@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, useColorScheme} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
 
-import {NewPOS, POS} from '../Screens';
+import {EditMyPOS, NewPOS, POS} from '../Screens';
 import {theme} from '../theme';
 
 const Stack = createNativeStackNavigator();
@@ -38,6 +38,7 @@ const HomeTabNavi = () => {
       <Stack.Screen name="POS" component={POS} />
 
       <Stack.Screen name="NewPOS" component={NewPOS} />
+      <Stack.Screen name="EditMyPOS" component={EditMyPOS} />
     </Stack.Navigator>
   );
 };

@@ -25,6 +25,7 @@ const PurpleBtn = ({children, title, onPress, LeftIcon, navigation, width}) => {
             style={{
               fontFamily: 'BRFirma-Regular',
               color: 'white',
+              textTransform: 'uppercase',
             }}>
             {title}
           </Title>

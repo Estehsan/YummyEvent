@@ -1,11 +1,17 @@
-import {StyleSheet, Text, View, useColorScheme} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  useColorScheme,
+  SafeAreaView,
+} from 'react-native';
 import React from 'react';
 import {theme} from '../../theme';
 import Heading from './Heading';
 
 const TitleBg = ({children, title}) => {
   return (
-    <View
+    <SafeAreaView
       style={{
         flex: 1,
         backgroundColor: theme.colors.blue3,
@@ -14,7 +20,7 @@ const TitleBg = ({children, title}) => {
         <Heading>{title}</Heading>
       </View>
       {children}
-    </View>
+    </SafeAreaView>
   );
 };
 

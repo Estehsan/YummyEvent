@@ -9,29 +9,32 @@ import {
   H2,
   Heading,
   PurpleBtn,
+  TextInputField,
   TitleBg,
 } from '../components/basic';
+import {ImageOverlap} from '../components/ScreenComp/NewPOSComp';
+import {theme} from '../theme';
 
-const NewPost = () => {
+const NewPost = ({navigation}) => {
   return (
-    <TitleBg title="New POS" style={[]}>
-      <View
-        style={[
-          GlobalCSS.alignCenter,
-          GlobalCSS.justifyCenter,
-          GlobalCSS.alignItemsCenter,
-          GlobalCSS.flex,
-          GlobalCSS.padding.xmd,
-        ]}>
-        <Image source={require('./../assets/images/EmptyList.png')} />
-        <View style={[GlobalCSS.padding.ylg]} />
-        <Heading>Your List is Empty</Heading>
-        <View style={[GlobalCSS.padding.ysm]} />
-
-        <H2>You have not created any POS yet, Create a new one.</H2>
-        <View style={[GlobalCSS.padding.ymd]} />
-
-        <PurpleBtn width="60%" title={'CREATE NEW POS'} />
+    <TitleBg title="New POS">
+      <View style={[GlobalCSS.flex]}>
+        <ImageOverlap />
+        <View style={[GlobalCSS.padding.xmd, GlobalCSS.flex]}>
+          <View style={[GlobalCSS.flex]}>
+            <TextInputField title="ORGANIZATION NAME" placeholder="Add Name" />
+            <TextInputField
+              title="activity of your organisation"
+              placeholder="Goods &amp; Services"
+            />
+          </View>
+          <View style={[GlobalCSS.flex, GlobalCSS.justifyEnd]}>
+            <PurpleBtn
+              title="CREATE NEW POS"
+              onPress={() => navigation.navigate('EditMyPOS')}
+            />
+          </View>
+        </View>
       </View>
     </TitleBg>
   );
