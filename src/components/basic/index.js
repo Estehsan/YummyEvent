@@ -14,6 +14,7 @@ import H3 from './H3';
 import H4 from './H4';
 import Span from './Span';
 import PGrey from './PGrey';
+import Title from './Title';
 
 export {
   PGrey,
@@ -25,6 +26,7 @@ export {
   PurpleBtn,
   WhiteBtn,
   ImageBg,
+  Title,
   Bg,
   TextInputField,
   P,

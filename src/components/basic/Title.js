@@ -1,17 +1,18 @@
-import {StyleSheet, useColorScheme, Text} from 'react-native';
+import {StyleSheet, Text} from 'react-native';
 import React from 'react';
-import {Title} from 'react-native-paper';
 import {theme} from '../../theme';
 
-const Heading = ({children, font, color, size}) => {
+const Title = ({children, font, color}) => {
   return (
     <>
       <Text
         style={{
-          fontSize: size ? size : 30,
+          fontSize: 22,
           color: color ? color : theme.colors.white,
           fontFamily: font ? font : 'Gilroy-Bold',
           fontWeight: '700',
+          letterSpacing: 1,
+          lineHeight: 24,
         }}>
         {children}
       </Text>
@@ -19,6 +20,6 @@ const Heading = ({children, font, color, size}) => {
   );
 };
 
-export default Heading;
+export default Title;
 
 const styles = StyleSheet.create({});

@@ -4,7 +4,15 @@ import LinearGradient from 'react-native-linear-gradient';
 import {Title} from 'react-native-paper';
 import {theme} from '../../theme';
 
-const PurpleBtn = ({children, title, onPress, LeftIcon, navigation, width}) => {
+const PurpleBtn = ({
+  children,
+  title,
+  onPress,
+  LeftIcon,
+  navigation,
+  fontFamily,
+  width,
+}) => {
   return (
     <LinearGradient
       colors={['#4200FF', '#FF02C7ff']}
@@ -23,7 +31,7 @@ const PurpleBtn = ({children, title, onPress, LeftIcon, navigation, width}) => {
           {children}
           <Title
             style={{
-              fontFamily: 'BRFirma-Regular',
+              fontFamily: fontFamily ? fontFamily : 'BRFirma-Regular',
               color: 'white',
               textTransform: 'uppercase',
             }}>
@@ -34,7 +42,7 @@ const PurpleBtn = ({children, title, onPress, LeftIcon, navigation, width}) => {
         <TouchableOpacity style={styles.GreenBtn} onPress={onPress}>
           <Title
             style={{
-              fontFamily: 'BRFirma-Bold',
+              fontFamily: fontFamily ? fontFamily : 'BRFirma-Bold',
               color: 'white',
               fontSize: 16,
             }}>
