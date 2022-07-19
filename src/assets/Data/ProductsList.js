@@ -16,8 +16,8 @@ export default [
   {
     id: 3,
     title: 'Heineken Filter',
-    category: 'Drinks',
-    icon: 'local-drink',
+    category: 'Desserts',
+    icon: 'local-cafe',
     image: require('./../images/product/p3.png'),
   },
   {

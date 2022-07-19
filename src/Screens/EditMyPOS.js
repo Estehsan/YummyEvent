@@ -10,13 +10,24 @@ import image from './../assets/images/product/p1.png';
 import ProductsList from './../assets/Data/ProductsList';
 
 const EditMyPOS = ({navigation}) => {
+  const [products, setProducts] = React.useState(ProductsList);
+  const [filter, setFilter] = React.useState(0);
   return (
     <TitleBg title={'POS'}>
-      <FilterCategory navigation={navigation} data={ProductsList} />
+      <FilterCategory
+        filter={filter}
+        setFilter={setFilter}
+        navigation={navigation}
+        data={ProductsList}
+      />
       <View style={[GlobalCSS.padding.xmd]}>
         <Title>Our Products</Title>
         <FlatList
-          data={ProductsList}
+          data={
+            filter === 0
+              ? ProductsList
+              : ProductsList.filter(item => item.id === filter)
+          }
           numColumns={2}
           renderItem={({item}) => <ProductItem item={item} />}
         />
