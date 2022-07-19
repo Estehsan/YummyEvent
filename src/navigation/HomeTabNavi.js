@@ -35,9 +35,9 @@ const HomeTabNavi = () => {
         },
         headerTintColor: theme.colors.white,
       }}>
-      {/* <Stack.Screen name="POS" component={POS} />
+      <Stack.Screen name="POS" component={POS} />
 
-      <Stack.Screen name="NewPOS" component={NewPOS} /> */}
+      <Stack.Screen name="NewPOS" component={NewPOS} />
       <Stack.Screen name="EditMyPOS" component={EditMyPOS} />
       <Stack.Screen name="AddPOSCategory" component={AddPOSCategory} />
     </Stack.Navigator>
